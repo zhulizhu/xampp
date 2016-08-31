@@ -115,7 +115,7 @@
             </div>
         </div>
     </div>
-    <div class="er-wei alert">
+    <div class="er-wei alert" style="border-radius: 0">
         <div class="wei">
             <div class="title">查看二维码
                 <button style="opacity: 1;margin-right: 10px;margin-top: 4px" class="close" data-dismiss="alert"><span style="color: #fff">&times;</span></button>
@@ -131,7 +131,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $(".erwei").click(function () {
-                $(".er-wei").show();
+                $(".er-wei").fadeToggle();
             });
         })
     </script>

@@ -1364,10 +1364,10 @@ button {
   margin-top: 20px !important;
   margin-bottom: 0 !important;
 }
-.container-fluid .tab6 .pull-left {
+.container-fluid form .bor6 .pull-left {
   padding: 14px 20px !important;
 }
-.container-fluid .tab6 .pull-left img {
+.container-fluid form .bor6 .pull-left img {
   width: 32px !important;
   height: auto;
 }
@@ -1741,7 +1741,7 @@ button {
   border: none !important;
 }
 .container-fluid form .bor {
-  border: 1px solid #d3d3d3 !important;
+  border: none !important;
 }
 .container-fluid form .form-group {
   margin-left: 0;

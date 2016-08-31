@@ -55,13 +55,13 @@
         <!--赞赏-->
         <div class="tab tab6" style="border: none">
             <a href="topics_num.html">
-                <div class="pull-left"><img src="/playChat/Public/Home/images/xinxi.png">&nbsp;&nbsp;话题数量</div>
+                <div class="pull-left" style="padding: 10.5px 20px 10.5px"><img style="width: 32%" src="/playChat/Public/Home/images/xinxi.png">&nbsp;&nbsp;话题数量</div>
                 <div class="pull-right clo" style="padding: 24px;"><img style="width: 6px;padding-top: 3px" src="/playChat/Public/Home/images/jiantou.png"></div>
             </a>
         </div>
         <div class="tab tab6" id="tab" >
             <a href="individual_income.html">
-                <div class="pull-left"><img src="/playChat/Public/Home/images/qian.png">&nbsp;&nbsp;个人赞赏收益</div>
+                <div class="pull-left" style="padding: 10.5px 20px 10.5px"><img style="width: 26%"  src="/playChat/Public/Home/images/qian.png">&nbsp;&nbsp;个人赞赏收益</div>
                 <div class="pull-right clo" style="padding: 24px;"><img style="width: 6px;padding-top: 3px" src="/playChat/Public/Home/images/jiantou.png"></div>
             </a>
         </div>

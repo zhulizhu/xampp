@@ -95,7 +95,7 @@
             </a>
         </div>
     </div>
-    <div class="ball alert">
+    <div class="ball alert" style="border-radius: 0">
         <div class="ball-con">
             <div class="title">话题名称</div>
             <form role="form">
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <div class="ball-one alert">
+    <div class="ball-one alert" style="border-radius: 0">
         <div class="ball-con">
             <div class="title">话题名称</div>
             <form role="form">
@@ -126,10 +126,10 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("#top-one").click(function () {
-                $(".ball").show();
+                $(".ball").fadeToggle();
             });
             $("#tab").click(function () {
-                $(".ball-one").show();
+                $(".ball-one").fadeToggle();
             })
         })
     </script>
