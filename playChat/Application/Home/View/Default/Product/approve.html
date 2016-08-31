@@ -1,0 +1,34 @@
+<extend name="Base/common"/>
+
+<block name="head">
+    <!-- 这里可以放一些需要在公共head中追加的代码,比如css代码,引入其他页面不需要的css文件,或者js文件 -->
+</block>
+
+<block name="header">
+    <!-- 这里可以放一些需要在公共header中追加的代码 -->
+</block>
+<!--认证-->
+<block name="body">
+    <!--这里放置正文代码-&#45;&#45;index-->
+    <div class="container-fluid con">
+        <!--认证表单信息-->
+        <form class="form-horizontal">
+            <div class="form-group bor">
+                <input  type="text" class="form-control" id="exampleInputName2" placeholder="请填写你的微信号">
+            </div>
+            <div class="form-group bor">
+                <input  type="text" class="form-control" placeholder="请填写你的手机号">
+            </div>
+            <div class="form-group bo">
+                <input style="margin-top: 0;" type="text" class="form-control num pull-left bor"
+                       placeholder="请输入验证码">
+                <button   class="btn btn-default nu pull-right bor b">验证码
+                </button>
+            </div>
+        </form>
+        <div class="bt">
+            <a href="play_room.html"><button class="btn btn-default">确定</button></a>
+        </div>
+    </div>
+
+</block>

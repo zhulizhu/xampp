@@ -1,0 +1,80 @@
+<extend name="Base/common"/>
+
+<block name="head">
+    <!-- 这里可以放一些需要在公共head中追加的代码,比如css代码,引入其他页面不需要的css文件,或者js文件 -->
+</block>
+
+<block name="header">
+    <!-- 这里可以放一些需要在公共header中追加的代码 -->
+</block>
+<!--开启视频-->
+<block name="body">
+    <!--这里放置正文代码-&#45;&#45;index-->
+    <div class="container-fluid">
+        <div class="tab" id="tab">
+            <a href="#">
+                <div class="pull-left">是否开启视频</div>
+                <div class="pull-right">是<img src="__IMG__/kaiqiguanbi.png"></div>
+            </a>
+        </div>
+        <div class="tab tabl tab5" id="tabl">
+            <a href="#">
+                <div class="up-down">已同步视频 上传视频</div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="thumbnail">
+                            <img src="__IMG__/tu3.png" alt="...">
+
+                            <div class="caption">
+                                <h4>最炫的车技</h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                    <div class="pull-right"><img src="__IMG__/shanchu.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="thumbnail">
+                            <img src="__IMG__/tu2.png" alt="...">
+
+                            <div class="caption">
+                                <h4>最炫的车技</h4>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                    <div class="pull-right"><img src="__IMG__/shanchu.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="thumbnail">
+                            <img src="__IMG__/tu1.png" alt="...">
+
+                            <div class="caption">
+                                <h4>最炫的车技</h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                    <div class="pull-right"><img src="__IMG__/shanchu.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="bt">
+            <button class="btn btn-default">完成</button>
+        </div>
+
+    </div>
+
+
+</block>

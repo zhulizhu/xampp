@@ -1,0 +1,32 @@
+﻿如果需要创建新的页面,比如:
+http://localhost/think/order
+http://localhost/think/order/car
+这时候需要在Application/Home/Controller下(即IndexController.class.php的同级目录)创建order控制器,目录结构和IndexController.class.php一模一样,
+但是,需要更改文件名和类名,比如将IndexController改为OrderController(注意大小写),
+然后,需要在View/Home下创建Order文件夹(注意大小写),文件夹中创建的模板文件一律小写,一般默认文件是index,
+要创建的模板文件说明如下:
+View/Home/Public下的head,header,footer,只能放置共用代码
+现在以Home/index.html为例,创建的文件结构如下:
+<extend name="Base/common"/>
+
+<block name="head">
+<!-- 这里可以放一些需要在公共head中追加的代码,比如css代码,引入其他页面不需要的css文件,或者js文件 -->
+</block>
+
+<block name="header">
+<!-- 这里可以放一些需要在公共header中追加的代码 -->
+</block>
+
+
+<block name="body">
+这里放置正文代码
+</block>
+
+<block name="footer">
+<!-- 这里放置需要在公共footer中追加的代码 -->
+</block>
+
+
+注:模板文件中调用css目录使用__CSS__,js目录使用__JS__,images目录使用__IMG__
+比如:__CSS__/style.css,__JS__/jquery.min.js,__IMG__/logo.png
+

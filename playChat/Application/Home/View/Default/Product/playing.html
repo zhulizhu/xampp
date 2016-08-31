@@ -1,0 +1,282 @@
+<extend name="Base/common"/>
+
+<block name="head">
+    <!-- 这里可以放一些需要在公共head中追加的代码,比如css代码,引入其他页面不需要的css文件,或者js文件 -->
+</block>
+
+<block name="header">
+    <!-- 这里可以放一些需要在公共header中追加的代码 -->
+</block>
+<!--话题直播室-->
+
+<block name="body">
+    <div class="container-fluid">
+        <div class="person">
+            <div class="pull-left"><img class="one" src="__IMG__/mao.png">&nbsp;穿鞋子的猫&nbsp;<a href="play_room.html"><img
+                    class="two" src="__IMG__/zhibojian2222.png"></a></div>
+            <div class="pull-right">&nbsp;&nbsp;&nbsp;<img src="__IMG__/leijirenshu.png">&nbsp;累计人数:<span>364</span>
+            </div>
+        </div>
+        <div class="sho" id="sho">
+            本次直播开始于 <span>2016-03-11</span> <span>18:00</span>
+        </div>
+
+        <div class="bt bt8" id="bt">
+            <a href="invite.html"><button class="btn btn-default" style="height: 40px;line-height: 40px;">邀请嘉宾</button></a>
+        </div>
+        <div class="play">
+            <video width="100%" height="240" controls="controls" autoplay="autoplay">
+                <source src="http://cmhsys.2k6k.com/1.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="talk">
+            <h2>16:40</h2>
+            <ul>
+                <li><img class="one" src="__IMG__/mao.png">&nbsp;&nbsp;<span>穿鞋子的猫</span>&nbsp;&nbsp;<span
+                        class="pers">主持人</span></li>
+                <li><img class="one" src="__IMG__/mao.png">&nbsp;&nbsp;<span>穿鞋子的猫</span>&nbsp;&nbsp;<span
+                        class="pers">嘉宾</span></li>
+            </ul>
+        </div>
+        <!--刷新和加号-->
+        <div class="refre">
+            <div class="ref" ><img onclick="myRefresh()" src="__IMG__/shuaxin.png"></div>
+            <div class="add"><img src="__IMG__/caozuo-.png"></div>
+        </div>
+    </div>
+    <!--点击加号的内容-->
+    <div class="add-function">
+        <div class="func">
+            <div class="top">
+                <h2 class="pull-left">主持人</h2>
+
+                <div class="pull-right">
+                    <img class="one" src="__IMG__/mao.png">
+
+                    <p>穿鞋子的猫</p>
+                </div>
+            </div>
+            <div class="row">
+                <a href="#">
+                    <div class="col-xs-4 one">
+                        <p>禁言模式</p></div>
+                </a>
+                <a href="#">
+                    <div class="col-xs-4 two">
+
+                        <p>在线列表</p></div>
+                </a>
+                <a href="#">
+                    <div class="col-xs-4 three">
+                        <p>导出语音</p></div>
+                </a>
+            </div>
+            <div class="row">
+                <a href="#">
+                    <div class="col-xs-4 four">
+
+                        <p>自动播放</p></div>
+                </a>
+                <a href="#">
+                    <div class="col-xs-4 five">
+
+                        <p>直播介绍</p></div>
+                </a>
+                <a href="#">
+                    <div class="col-xs-4 six">
+
+                        <p>结束直播</p></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+              function myRefresh(){
+                  window.location.reload();
+              }
+            $("#sho").click(function () {
+                $("#bt").toggle();
+            });
+//            点击加号显示功能
+            $(".add").click(function () {
+                $(".add-function").toggle();
+
+            });
+//            $(".one").click(function () {
+//                $(this).css({
+//                    'background': 'url("__IMG__/jingyanmoishi.png") no-repeat 50% 4%',
+//                    'background-size': '34%'
+//                });
+            //   点击任何位置加号的内容关闭
+            $(".add-function").click(function () {
+                $(".add-function").hide();
+            });
+            //号航的语音,文字图片显示和隐藏
+            function hideButton() {
+                $(".chang_lu").hide();
+                $(".yu_yin").hide();
+                $(".wen_zi").hide();
+                $(".tu_pian").hide();
+            }
+
+            //点击语音激活状态
+            $(".ico1").click(function () {
+                $(this).css({
+                    'color': '#00b0f0',
+                    'background': 'url("__IMG__/yuyin1.png") no-repeat 28% 50%',
+                    'background-size': '18%'
+                });
+                $(".ico2").css({
+                    'color': '#888888',
+                    'background': 'url("__IMG__/wenzi1.png") no-repeat 28% 50%',
+                    'background-size': '20%'
+                });
+                $(".ico3").css({
+                    'color': '#888888',
+                    'background': 'url("__IMG__/tupian.png") no-repeat 28% 50%',
+                    'background-size': '18%'
+                });
+                hideButton();
+                $(".yu_yin").toggle();
+            });
+            //点击长录
+            $(".timer").click(function () {
+                hideButton();
+                $(".chang_lu").show();
+
+            });
+            //点击短录
+            $(".time").click(function () {
+                hideButton();
+                $(".yu_yin").show();
+            });
+            //点击文字激活状态
+            $(".ico2").click(function () {
+                $(this).css({
+                    'color': '#00b0f0',
+                    'background': 'url("__IMG__/wenzi.png") no-repeat 28% 50%',
+                    'background-size': '20%'
+                });
+                $(".ico1").css({
+                    'color': '#888',
+                    'background': 'url("__IMG__/yuyin.png") no-repeat 28% 50%',
+                    'background-size': '18%'
+                });
+                $(".ico3").css({
+                    'color': '#888888',
+                    'background': 'url("__IMG__/tupian.png") no-repeat 28% 50%',
+                    'background-size': '18%'
+                });
+                hideButton();
+                $(".wen_zi").toggle();
+            });
+            //点击图片激活状态
+            $(".ico3").click(function () {
+                $(this).css({
+                    'color': '#00b0f0',
+                    'background': 'url("__IMG__/tupian1.png") no-repeat 28% 50%',
+                    'background-size': '18%'
+                });
+                $(".ico1").css({
+                    'color': '#888',
+                    'background': 'url("__IMG__/yuyin.png") no-repeat 28% 50%',
+                    'background-size': '18%'
+                });
+                $(".ico2").css({
+                    'color': '#888888',
+                    'background': 'url("__IMG__/wenzi1.png") no-repeat 28% 50%',
+                    'background-size': '20%'
+                });
+
+                hideButton();
+                $(".tu_pian").toggle();
+            });
+
+        });
+    </script>
+</block>
+
+<block name="footer">
+    <!-- 这里放置需要在公共footer中追加的代码 -->
+    <!--底部功能-->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 ico1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;语音
+                </div>
+                <div class="col-xs-4 ico2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;文字
+                </div>
+                <div class="col-xs-4 ico3" id="last">
+                    &nbsp;&nbsp;&nbsp;&nbsp;图片
+                </div>
+            </div>
+        </div>
+        <!--语音短录-->
+        <div class="yu_yin">
+            <div class="luyin">
+                <div class="pull-left" style="border-right: 1px solid #bbb;">
+                    <a href="#">短录&nbsp;&nbsp;
+                    </a>
+                </div>
+                <div class="pull-right timer">
+                    <a href="#">&nbsp;&nbsp;长录</a>
+                </div>
+            </div>
+            <div class="tal">
+                <p><img src="__IMG__/anniu.png"></p>
+
+                <p>按住最长录音60s</p>
+            </div>
+        </div>
+        <!--语音长录-->
+        <div class="chang_lu">
+            <div class="luyin time">
+                <div class="pull-left">
+                    <a href="#">短录&nbsp;&nbsp;</a>
+                </div>
+                <div class="pull-right" style="border-left: 1px solid #bbb;">
+                    <a href="#">&nbsp;&nbsp;长录</a>
+                </div>
+            </div>
+            <div class="tal">
+                <p><img src="__IMG__/anniu.png"></p>
+
+                <p>按住每60s自动发送录音</p>
+            </div>
+        </div>
+        <!--文字-->
+        <div class="wen_zi">
+            <form class="form-inline">
+                <button type="submit" class="btn btn-default" style="float: left;padding: 6px 8px;">返回</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="来说点什么吧">
+                </div>
+                <div class="smil" style="text-align: center;line-height: 34px"><img src="__IMG__/biaoqing.png" style="height: 24px;"></div>
+                <button  type="submit" class="btn btn-default bt1" style="float: right">发送</button>
+            </form>
+        </div>
+        <!--图片-->
+        <div class="tu_pian">
+            <div class="pull-left">
+                <a href="#" style="color: #292626">
+                <img src="__IMG__/tupian22222222.png">
+
+                <P>图片</P>
+                    </a>
+            </div>
+            <div class="pull-left">
+                <a href="open_video.html" style="color: #292626">
+                <img src="__IMG__/shipin.png">
+                <P>视频</P>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+</block>
