@@ -51,7 +51,7 @@
         <form role="form">
             <p>你的头衔<span>(18个字以内)</span></p>
             <div class="form-group for">
-                <textarea class="form-control" rows="3" placeholder="可填写你的职位,专家认证等信息"></textarea>
+                <textarea style="background-color:#f3fcff!important; " class="form-control" rows="3" placeholder="可填写你的职位,专家认证等信息"></textarea>
             </div>
         </form>
         <div class="bt bt5 bt6">

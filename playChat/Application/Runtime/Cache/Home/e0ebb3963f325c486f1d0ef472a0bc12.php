@@ -31,15 +31,15 @@
         <!--认证表单信息-->
         <form class="form-horizontal">
             <div class="form-group bor">
-                <input  type="text" class="form-control" id="exampleInputName2" placeholder="请填写你的微信号">
+                <input style="background-color: #efefef"  type="text" class="form-control" id="exampleInputName2" placeholder="请填写你的微信号">
             </div>
             <div class="form-group bor">
-                <input  type="text" class="form-control" placeholder="请填写你的手机号">
+                <input style="background-color: #efefef"  type="text" class="form-control" placeholder="请填写你的手机号">
             </div>
             <div class="form-group bo">
-                <input style="margin-top: 0;" type="text" class="form-control num pull-left"
+                <input style="background-color: #efefef;margin-top: 0;"  type="text" class="form-control num pull-left"
                        placeholder="请输入验证码">
-                <button   class="btn btn-default nu pull-right bor b">验证码
+                <button class="btn btn-default nu pull-right bor b">验证码
                 </button>
             </div>
         </form>

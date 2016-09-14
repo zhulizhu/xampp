@@ -43,7 +43,7 @@
                         <button class="btn btn-default">查看二维码</button>
                     </div>
                     <div class="pull-right">
-                        <a href="setting.html"><button class="btn btn-default ">设置直播间</button></a>
+                       <button class="btn btn-default ">设置直播间</button>
                     </div>
                 </div>
                 <div class="tex" style="padding-top: 0">
@@ -54,7 +54,6 @@
                         <input style="width: 20px;height: 20px" type="checkbox">
                     </label>
                 </div>
-
             </div>
 
         </div>
@@ -73,7 +72,7 @@
                         <button class="btn btn-default">查看二维码</button>
                     </div>
                     <div class="pull-right">
-                        <a href="setting.html"> <button class="btn btn-default ">设置直播间</button></a>
+                        <button class="btn btn-default ">设置直播间</button>
                     </div>
                 </div>
                 <div class="tex" style="padding-top: 0">

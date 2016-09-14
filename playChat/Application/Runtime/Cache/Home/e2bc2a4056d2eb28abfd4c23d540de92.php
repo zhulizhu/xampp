@@ -14,6 +14,11 @@
 
 	
     <!-- 这里可以放一些需要在公共head中追加的代码,比如css代码,引入其他页面不需要的css文件,或者js文件 -->
+    <style>
+        .pay,.meeting{
+            display: none;
+        }
+    </style>
 
 </head>
 <body>
@@ -35,33 +40,50 @@
         </div>
         <div class="row" style="padding-left:0;padding-right: 0;">
             <div class="col-xs-4">
-                <a href="public_play.html">
                     <h4>公开直播</h4>
-
-                    <div><img style="width: 76%;height: auto"  src="/playChat/Public/Home/images/gongkaizhibo.png"></div>
-                </a>
+                    <div id="pub"><img class="pub" style="width: 76%;height: auto"  src="/playChat/Public/Home/images/gongkaizhibo1.png"></div>
+                <p class="public" style="left: 42%;display: block;">
+                    <img  src="/playChat/Public/Home/images/sanjiao.png">
+                </p>
             </div>
             <div class="col-xs-4">
-                <a href="pay_play.html">
                     <h4>收费直播</h4>
-
-                    <div><img style="width: 76%;height: auto"  src="/playChat/Public/Home/images/shouferizhibo.png"></div>
-                </a>
+                    <div id="pa"><img class="pa" style="width: 76%;height: auto"  src="/playChat/Public/Home/images/shouferizhibo.png"></div>
+                <p class="pay" style="left: 42%;display: none;">
+                    <img  src="/playChat/Public/Home/images/sanjiao.png">
+                </p>
             </div>
             <div class="col-xs-4">
-                <a href="into_meeting.html">
                     <h4>内部会议</h4>
-
-                    <div><img style="width: 76%;height: auto"  src="/playChat/Public/Home/images/neibu1.png"></div>
-                </a>
-
-                <p style="left: 42%">
+                    <div id="meet"><img class="meet" style="width: 76%;height: auto"  src="/playChat/Public/Home/images/neibu.png"></div>
+                <p class="meeting" style="left: 42%;display: none;">
                     <img  src="/playChat/Public/Home/images/sanjiao.png">
                 </p>
             </div>
         </div>
+        <!--公开直播-->
+        <div class="all public">
+            <p>所有人可收听</p>
+        </div>
+        <!--收费直播-->
+        <div class="all pay" >
+            <p>设置入场费用(72小时)</p>
+            <!--<form class="form-horizontal">-->
+            <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="请输入金额(最低1元)">-->
+            <!--</div>-->
+            <!--</form>-->
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control"  placeholder="请输入金额(最低1元)">
+                        <div class="input-group-addon">|元</div>
+                    </div>
+                </div>
+            </form>
+        </div>
         <!--设置密码话题密码-->
-        <div class="all">
+        <div class="all meeting" >
             <p>设置密码</p>
 
             <form class="form-inline">
@@ -124,7 +146,34 @@
         </div>
     </div>
     <script type="text/javascript">
+
+
         $(document).ready(function () {
+            $("#pub").click(function(){
+                $(".pub").attr("src","/playChat/Public/Home/images/gongkaizhibo1.png");
+                $(".pa").attr("src","/playChat/Public/Home/images/shouferizhibo.png");
+                $(".meet").attr("src","/playChat/Public/Home/images/neibu.png");
+                $(".public").css('display','block');
+                $(".pay").css('display','none');
+                $(".meeting").css('display','none');
+
+            });
+            $("#pa").click(function(){
+                $(".pub").attr("src","/playChat/Public/Home/images/gongkaizhibo.png");
+                $(".pa").attr("src","/playChat/Public/Home/images/shouferizhibo1.png");
+                $(".meet").attr("src","/playChat/Public/Home/images/neibu.png");
+                $(".public").css('display','none');
+                $(".pay").css('display','block');
+                $(".meeting").css('display','none');
+            });
+            $("#meet").click(function(){
+                $(".pub").attr("src","/playChat/Public/Home/images/gongkaizhibo.png");
+                $(".pa").attr("src","/playChat/Public/Home/images/shouferizhibo.png");
+                $(".meet").attr("src","/playChat/Public/Home/images/neibu1.png");
+                $(".public").css('display','none');
+                $(".pay").css('display','none');
+                $(".meeting").css('display','block');
+            });
             $("#top-one").click(function () {
                 $(".ball").fadeToggle();
             });
